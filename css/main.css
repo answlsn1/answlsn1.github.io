@@ -1,0 +1,490 @@
+@charset 'utf-8';
+@import url('notosanskr/NotoSansKR.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline-style: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+ul,
+li {
+    list-style:none;
+}
+
+a {
+    color:#333;
+    text-decoration: none;
+}
+
+html {
+    font-size:10px;
+}
+
+body {
+    font-size:1.6rem;
+    font-family:'Noto Sans KR',sans-serif;
+    color:#333;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.06rem;
+}
+
+
+/* 공통 클래스 */
+.clearfix:after {
+    content:'';
+    position:relative;
+    display:block;
+    width:100%;
+    clear:both;
+}
+
+.container {
+    position:relative;
+    display:block;
+
+    width:130rem;
+    margin: 0 auto;
+}
+
+.wrap {
+    position:relative;
+    display:block;
+}
+
+
+/* 상단 */
+.header {
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    background-color:rgba(228,228,228,0.8);
+    height:10rem;
+    z-index:999;
+}
+
+.header .container {
+    
+}
+
+.logo {
+    position:absolute;
+    left:1.5rem;
+    top:1.5rem;
+    width:7.1rem;
+    height:7rem;
+    background: url('../images/logo.png')no-repeat;
+    background-size: 100%;
+    font-size:0;
+}
+
+.gnb {
+    position:absolute;
+    left:31.5rem;
+    top:5.8rem;
+}
+
+.depth1 {}
+
+.depth1 li {
+    float:left;
+    margin-right:5rem;
+}
+
+.depth1 li a {
+    font-size:2.1rem;
+}
+
+.depth1 li a:hover {}
+
+
+/* 비주얼 */
+.visual {
+    position:relative;
+    margin-top:10rem;
+    width:100%;
+    height:56rem;
+    background:url('../images/visual.png')no-repeat center;
+    background-size:cover;
+}
+
+.visual img {
+    position:absolute;
+    left:0;
+    top:7rem;
+}
+
+.visual button {
+    position:absolute;
+    right:18rem;
+    top:51.5rem;
+    background-color:#45433c;
+    color:#fff;
+    border:1px solid #fff;
+    padding: 0.6rem;
+}
+
+/* 프로필 */
+.profile {
+    position:relative;
+    padding: 6rem 0;
+}
+
+.pro-tit {
+    font-size:3rem;
+    font-weight:700;
+    color:#b47957;
+    text-align:left;
+}
+
+/* 프로필 왼쪽영역 */
+.pro-left {
+    position:relative;
+    width:50%;
+    
+    float:left;
+}
+
+.pro-left-1 {
+    position:relative;
+    margin-left:50%;
+    transform:translateX(-50%);
+    display:inline-block;
+}
+
+.pro-left-1 h2 {
+    font-size:3.3rem;
+    color:#2b2942;
+}
+
+.pro-left-1 p {
+    font-size:1.7rem;
+    font-weight:700;
+    color:#b9b9b9;
+}
+
+.pro-left-2 {
+    position:relative;
+    margin-top:10rem;
+}
+
+.pro-left-2 h2 {
+    font-size:3rem;
+    font-weight:700;
+    color:#b47957;
+    text-align:center;
+    margin-bottom:2rem;
+}
+
+.pro-left-2 img {
+    display:block;
+    margin:0 auto;
+}
+
+.pro-txt-box {
+    position:relative;
+    margin-left:50%;
+    transform:translateX(-50%);
+}
+
+.pro-left-2-txt1 {
+    font-size:2rem;
+    line-height:1.5;
+
+    margin:2rem 0;
+}
+
+.pro-left-2-txt2 {
+    font-size:2rem;
+}
+
+.pro-left-2-txt2 span {
+    font-size:1.3rem;
+    color:#ccc;
+}
+
+.pro-left-2-txt1 b {
+    background: url('../images/yellow.png')no-repeat center;
+}
+
+.pro-left-3 {
+    position:relative;
+    margin-top:7rem;
+    
+}
+
+/* 프로필 오른쪽영역 */
+.pro-right {
+    position:relative;
+    width:50%;
+    
+    float:right;
+    text-align:center;
+    padding-left:18rem;
+}
+
+.pro-right-1 {
+    position:relative;
+}
+
+.pro-right-1 h2 {
+    margin-bottom:2rem;
+}
+
+.pro-right-1 p {
+    font-size:1.9rem;
+    text-align:left;
+}
+
+.pro-right-1-txt1 {
+    font-size:1.9rem;
+    display:block;
+    float:left;
+    line-height:1.8;
+
+}
+.pro-right-1-txt2 {
+    font-size:1.9rem;
+    display:block;
+    float:left;
+    text-align:left;
+    line-height:1.8;
+
+    margin-left:0.5rem;
+}
+
+.pro-right-2 {
+    position:relative;
+    margin-top:7rem;
+}
+
+.skill-list {
+    position:relative;
+    margin-top:2rem;
+}
+
+.skill-list li {
+    overflow:hidden;
+    margin-bottom:1.5rem;
+}
+
+.skill-tit {
+    float:left;
+    width:7rem;
+    margin-right:1rem;
+    text-align:left;
+
+    font-weight:500;
+}
+
+.skill-level {
+    width:80%;
+    float:left;
+}
+
+.skill-bottom {
+    overflow:hidden;
+    float:left;
+    margin:2rem 2rem 0 0;
+}
+
+.skill-circle {
+    position:relative;
+    display:inline-block;
+    float:left;
+}
+
+.circle-tit {
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:1rem;
+    text-transform: uppercase;
+
+}
+
+#skill_photoshop {
+    width:26rem;
+    height:1rem;
+}
+
+#skill_illustrator {
+    width:26rem;
+    height:1rem;
+}
+
+#skill_adobe_xd {
+    width:26rem;
+    height:1rem;
+}
+
+#skill_html {
+    position:relative;
+    width:10rem;
+    height:10rem;
+}
+
+#skill_css {
+    position:relative;
+    width:10rem;
+    height:10rem;
+}
+
+#skill_jquery {
+    position:relative;
+    width:10rem;
+    height:10rem;
+}
+
+.pro-right-3 {
+    position:relative;
+    float:left;
+
+    margin-top:11rem;
+}
+
+/* 리디자인 */
+.redesign {
+    position:relative;
+    display:block;
+    background: url('../images/back1.png')no-repeat center;
+
+    padding-bottom:15rem;
+}
+
+.redesign h2 {
+    position:relative;
+    
+    font-size:4rem;
+    font-weight:600;
+    color:#b47957;
+
+    margin-left:7.5rem;
+    margin-bottom:5rem;
+}
+
+.redesign h2::after {
+    content:'';
+    width:27.5rem;
+    height:0.1rem;
+    display:block;
+    background:#ccc;
+    margin-left:-7.5rem;
+}
+
+.rede-main {
+    position:relative;
+    display:inline-block;
+    width:47.5rem;
+    height:56rem;
+
+    margin-left:15rem;
+    border:1px solid #ffd3a9;
+    background: url('../images/callaway.jpg')no-repeat center;
+    background-size:cover;
+
+    float:left;
+}
+
+.rede-process {
+    position:absolute;
+    display:block;
+    left:0;
+    bottom:0;
+
+    width:50%;
+    border-right:1px solid #fff;
+    text-align:center;
+    color:#fff;
+    font-size:2.2rem;
+
+    background-color:rgb(127,127,127,0.7);
+    padding:0.8rem 0;
+}
+
+.rede-redesign {
+    position:absolute;
+    display:block;
+    right:0;
+    bottom:0;
+
+    width:50%;
+    border-left:1px solid #fff;
+    text-align:center;
+    color:#fff;
+    font-size:2.2rem;
+
+    background-color:rgb(127,127,127,0.7);
+    padding:0.8rem 0;
+}
+
+.rede-sub-box {
+    position:relative;
+    float:left;
+    margin-left:1.3rem;
+}
+
+.rede-sub {
+    position:relative;
+    width:17.8rem;
+    height:17.8rem;
+    margin-bottom:1.3rem;
+    border:1px solid #ffd3a9;
+    
+}
+
+.rede-text {
+    position:relative;
+    float:left;
+    margin:10rem 0 0 6rem;
+
+}
+
+.rede-text h3 {
+    font-size:3rem;
+    color:#b47957;
+
+    margin-bottom:4.5rem;
+}
+
+.rede-text p {
+    font-size:1.6rem;
+    line-height:1.8;
+
+    margin-bottom:5rem;
+}
+
+/* 퍼블리싱 */
+.publishing {
+    position:relative;
+}
+
+.publishing h2 {
+    position:relative;
+    
+    font-size:4rem;
+    font-weight:600;
+    color:#b47957;
+
+    margin-left:7.5rem;
+    margin-bottom:5rem;
+}
+
+.publishing h2::after {
+    content:'';
+    width:32rem;
+    height:0.1rem;
+    display:block;
+    background:#ccc;
+    margin-left:-7.5rem;
+}
+/* 라이프스토리 */
+/* 컨택트 */
