@@ -167,4 +167,119 @@ $(document).ready(function(){
             jquery.animate(0.8);
         }
     });
+
+    let rede_text = $('.rede-text');
+
+    new Swiper('.sw-rede', {
+        effect: 'fade',
+        navigation: {
+            nextEl: ".sw-rede-next",
+            prevEl: ".sw-rede-prev",
+        },
+        speed: 1000,
+        on: {
+            slideChange: function () {
+
+                if (!rede_text) {
+                    rede_text = $('.rede-text');
+                }
+
+                // this.activeIndex : 활성화 되어야 할 슬라이드
+                rede_text.eq(this.activeIndex).css({
+                    opacity: 0,
+                    'margin-left': '-3%'
+                });
+                rede_text.eq(this.activeIndex).stop().animate({
+                    opacity: 1,
+                    'margin-left': '0%'
+                }, 800);
+
+                // this.previousIndex : 보였었던 슬라이드
+                rede_text.eq(this.previousIndex).stop().animate({
+                    opacity: 0
+                }, 300);
+
+                // 마치 클릭이 되었을 때의 index 처럼
+                // 실제 html 코딩의 순서 값이 넘어온다.
+                // console.log(this.realIndex);               
+            }
+        },
+    });
+
+
+    // publishing
+    let publ_box = $('.publ-box');
+    let publ_btn = $('.publ-btn');
+
+        
+    $('.publ-2 > .publ-btn').hide();
+    $('.publ-3 > .publ-btn').hide();
+    $('.publ-4 > .publ-btn').hide();
+
+    publ_box.eq(0).click(function(){
+        publ_box.eq(0).addClass('publ-wide');
+        publ_box.eq(1).addClass('publ-close');
+        publ_box.eq(2).addClass('publ-close');
+        publ_box.eq(3).addClass('publ-close');
+
+        publ_box.eq(0).removeClass('publ-close');
+        publ_box.eq(1).removeClass('publ-wide');
+        publ_box.eq(2).removeClass('publ-wide');
+        publ_box.eq(3).removeClass('publ-wide');
+
+        $('.publ-1 > .publ-btn').show();
+        $('.publ-2 > .publ-btn').fadeOut();
+        $('.publ-3 > .publ-btn').fadeOut();
+        $('.publ-4 > .publ-btn').fadeOut();
+    });
+    publ_box.eq(1).click(function(){
+        publ_box.eq(0).addClass('publ-close');
+        publ_box.eq(1).addClass('publ-wide');
+        publ_box.eq(2).addClass('publ-close');
+        publ_box.eq(3).addClass('publ-close');
+        
+        publ_box.eq(0).removeClass('publ-wide');
+        publ_box.eq(1).removeClass('publ-close');
+        publ_box.eq(2).removeClass('publ-wide');
+        publ_box.eq(3).removeClass('publ-wide');
+        
+        $('.publ-1 > .publ-btn').fadeOut();
+        $('.publ-2 > .publ-btn').show();
+        $('.publ-3 > .publ-btn').fadeOut();
+        $('.publ-4 > .publ-btn').fadeOut();
+    });
+
+    publ_box.eq(2).click(function(){
+        publ_box.eq(0).addClass('publ-close');
+        publ_box.eq(1).addClass('publ-close');
+        publ_box.eq(2).addClass('publ-wide');
+        publ_box.eq(3).addClass('publ-close');
+        
+        publ_box.eq(0).removeClass('publ-wide');
+        publ_box.eq(1).removeClass('publ-wide');
+        publ_box.eq(2).removeClass('publ-close');
+        publ_box.eq(3).removeClass('publ-wide');
+        
+        $('.publ-1 > .publ-btn').fadeOut();
+        $('.publ-2 > .publ-btn').fadeOut();
+        $('.publ-3 > .publ-btn').show();
+        $('.publ-4 > .publ-btn').fadeOut();
+    });
+
+    publ_box.eq(3).click(function(){
+        publ_box.eq(0).addClass('publ-close');
+        publ_box.eq(1).addClass('publ-close');
+        publ_box.eq(2).addClass('publ-close');
+        publ_box.eq(3).addClass('publ-wide');
+        
+        publ_box.eq(0).removeClass('publ-wide');
+        publ_box.eq(1).removeClass('publ-wide');
+        publ_box.eq(2).removeClass('publ-wide');
+        publ_box.eq(3).removeClass('publ-close');
+        
+        $('.publ-1 > .publ-btn').fadeOut();
+        $('.publ-2 > .publ-btn').fadeOut();
+        $('.publ-3 > .publ-btn').fadeOut();
+        $('.publ-4 > .publ-btn').show();
+    });
 });
