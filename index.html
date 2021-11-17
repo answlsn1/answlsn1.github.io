@@ -20,6 +20,7 @@
     <script src="js/swiper/swiper.min.js"></script>
     <link href="js/aos/aos.css" rel="stylesheet">
     <script src="js/aos/aos.js"></script>
+    <script src="js/waypoints.min.js"></script>
     <script src="js/jquery.nicescroll.min.js"></script>
     <script type="text/javascript" src="js/progressbar/progressbar.js"></script>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -32,6 +33,10 @@
 </head>
 
 <body>
+    <div class="gotop">
+        <i class="fas fa-arrow-up"></i>
+        <p>TOP</p>
+    </div>
     <div class="wrap">
         <!-- 상단 -->
         <header class="header">
@@ -39,12 +44,13 @@
                 <a href="#" class="logo">logo</a>
                 <nav class="gnb">
                     <ul class="depth1 clearfix">
-                        <li><a href="#visual">Visual</a></li>
-                        <li><a href="#profile">Profile</a></li>
-                        <li><a href="#redesign">Redesign</a></li>
-                        <li><a href="#publishing">Publishing</a></li>
-                        <li><a href="#life story">Life story</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#" class="menu1">Visual</a></li>
+                        <li><a href="#" class="menu2">Profile</a></li>
+                        <li><a href="#" class="menu3">Redesign</a></li>
+                        <li><a href="#" class="menu4">Publishing</a></li>
+                        <li><a href="#" class="menu5">More design</a></li>
+                        <li><a href="#" class="menu6">Life story</a></li>
+                        <li><a href="#" class="menu7">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -69,7 +75,7 @@
                     </div>
 
                     <div class="pro-left-2">
-                        <h2>AWARD/LICENSE</h2>
+                        <h2 class="main-title">AWARD/LICENSE</h2>
                         <img src="images/award.png" alt="">
                         <div class="pro-txt-box">
                             <p class="pro-left-2-txt1">
@@ -147,12 +153,12 @@
                         <img src="images/profile-img-2.png" alt="">
                     </div>
                 </div>
-            </div> 
+            </div>
         </section>
         <!-- 리디자인 -->
         <section class="redesign" id="redesign">
             <div class="container">
-                <h2 class="main-title">REDESIGN</h2>
+                <h2 class="rede-title">REDESIGN</h2>
                 
                 <div class="rede-btn">
                     <a href="#"><i class="fas fa-chevron-left sw-rede-prev"></i></a>
@@ -228,7 +234,7 @@
         <!-- 퍼블리싱 -->
         <section class="publishing" id="publishing">
             <div class="container">
-                <h2>PUBLISHING</h2>
+                <h2 class="publ-title">PUBLISHING</h2>
                 <div class="publ-main clearfix">
                     <div class="publ-box left publ-1 publ-wide">
                         <h3>풀무원 녹즙</h3>
@@ -288,7 +294,7 @@
         <!-- 작품더보기 -->
         <section class="more-design" id="more-design">
             <div class="container">
-                <h2>MORE DESIGN</h2>
+                <h2 class="more-title">MORE DESIGN</h2>
                 <div class="more-main clearfix">
                     <div class="more-box"></div>
                     <div class="more-box"></div>
@@ -302,8 +308,8 @@
         <!-- 라이프스토리 -->
         <section class="life" id="life">
             <div class="container">
-                <h2>LIFE STORY</h2>
-                <div class="life-box">
+                <h2 class="life-title">LIFE STORY</h2>
+                <div class="life-box life1">
                     <div class="life-1-1"></div>
                     <div class="life-1-2"></div>
                     <div class="life-1-3"></div>
@@ -319,7 +325,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="life-box">
+                <div class="life-box life2">
                     <div class="life-2-1"></div>
                     <div class="life-2-2"></div>
                     <div class="life-2-3"></div>
@@ -331,18 +337,18 @@
                             이후에도 그때추억을 회상하며 행복을 느끼기도 합니다.<br>
                             장기적으로 일을 함에 있어서 멘탈 케어는 업무수행능력과 함께<br>
                             가장 중요하다 생각합니다. 이떻게보면 작아보일수있는 추억들이<br>
-                            필요할땐 힘이 되어주기도한다는 점이 너무 좋게 느껴졌습니다.
+                            필요할땐 힘이 되어주기도 한다는 점이 너무 좋게 느껴졌습니다.
                         </p>
                     </div>
                 </div>
-                <div class="life-box">
+                <div class="life-box life3">
                     <div class="life-3-1"></div>
                     <div class="life-3-2"></div>
                     <div class="life-3-3"></div>
                     <div class="life-3-txt">
                         <h3>일상을 함께하는 친구</h3>
                         <p>
-                            고양이는 말을 하지 못하는 동물이지만 어떨때엔꺼내지도 않은<br>
+                            고양이는 말을 하지 못하는 동물이지만 어떨때엔 꺼내지도 않은<br>
                             저의 감정을 다 아는건가 싶었던적이 있습니다. 한번은 옆에와서<br>
                             위로해주는 듯한 느낌을 받은적도 있었고, 제가 다가가도 거부<br>
                             하지않았던게 고마울때가 많았던것 같습니다.<br>
@@ -356,7 +362,24 @@
         </section>
         <!-- 컨택트 -->
         <section class="contact" id="contact">
-
+            <div class="container">
+                <h2 class="cont-title">CONTACT</h2>
+                <div class="contact-txt">
+                    <p>
+                        지금까지의 시간들은  다시 디자이너의 꿈을 잡기까지의 과정이라 생각합니다<br>
+                        여러 경험을 통해 사회에 나갈 준비가 되었고 맡은일에 최선을 다하는 책임감을<br>
+                        갖게 되었습니다. 처음 웹디자인을 배웠을때 처럼 처음부터 시작하는 마음으로<br>
+                        재학습 하였습니다. 그 결과로 다시 코딩에 대한 자신감과 이전에 비해 더 넓게<br>
+                        볼수있는 시야를 얻게 되었고 이것을 토대로하여 꾸준히 성장하는<br>
+                        디자이너가 되겠습니다.
+                    </p>
+                    <button>PORTFOLIO/DOWNLOAD</button>
+                    <span>
+                        Email : answlsn@naver.com<br>
+                        kakao : ansqks@naver.com
+                </span>
+                </div>
+            </div>
         </section>
     </div>
 </body>
