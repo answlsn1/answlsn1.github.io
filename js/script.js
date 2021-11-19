@@ -97,7 +97,7 @@ $(document).ready(function(){
             });
         }
     }, {
-        offset: '75%'
+        offset: '90%'
     });
 
     $('.pro-right-3').waypoint(function (dir) {
@@ -111,7 +111,7 @@ $(document).ready(function(){
             });
         }
     }, {
-        offset: '75%'
+        offset: '80%'
     });
 
     var photoshop = new ProgressBar.Line(skill_photoshop, {
