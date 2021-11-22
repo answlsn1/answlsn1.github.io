@@ -578,7 +578,7 @@ body {
 .publ-main {
     position:absolute;
     left:4.2rem;
-    top:19rem;
+    top:18.9rem;
     width:121.5rem;
     height:59rem;
 }
@@ -668,51 +668,6 @@ body {
     color:#000;
 }
 
-/* 작품 더보기 */
-.more-design {
-    position:relative;
-    padding:12rem 0;
-}
-
-.more-design h2 {
-    position:absolute;
-    left:7.5rem;
-    top:-8rem;
-    
-    font-size:4rem;
-    font-weight:600;
-    color:#b47957;
-    
-    opacity: 0;
-    margin-left:-15%;
-    transition:all 0.7s;
-}
-
-.more-design h2::after {
-    content:'';
-    width:35rem;
-    height:0.1rem;
-    display:block;
-    background:#ccc;
-    margin-left:-7.5rem;
-}
-
-.more-main {
-    position:relative;
-    width:100%;
-    margin-left:11rem;
-}
-
-.more-box {
-    position:relative;
-
-    width:25%;
-    height:30rem;
-    border:1px solid #b47957;
-    float:left;
-
-    margin:3rem 3rem;
-}
 /* 라이프스토리 */
 .life {
     position:relative;
