@@ -433,25 +433,7 @@ $(document).ready(function(){
         $('.publ-3 > .publ-btn').fadeOut();
         $('.publ-4 > .publ-btn').show();
     });
-
-
-    // moredesign
-    $('.more-title').waypoint(function (dir) {
-        $('.more-title').css({
-            opacity: 0,
-            'margin-left':'-15%',
-            'transition':'all 0.7s' 
-        });
-        if (dir == "down") {
-            $('.more-title').css({
-                opacity: 1,
-                'margin-left':'0%'
-            });
-        }
-    }, {
-        offset: '80%'
-    });
-
+    
     // life
     $('.life-title').waypoint(function (dir) {
         $('.life-title').css({
