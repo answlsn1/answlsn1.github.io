@@ -72,6 +72,30 @@ $(document).ready(function(){
 
     // Profile
 
+    // profile click.모달창
+    let worklist = $('.worklist');
+    let worklist_cont = $('.worklist-cont');
+    let worklist_close = $('.worklist-close');
+    let ebi = $('.ebi');
+
+    worklist.hide();
+
+    ebi.click(function(){
+        worklist.fadeIn();
+    });
+
+    worklist_close.click(function () {
+        worklist.fadeOut();
+    });
+
+    worklist.click(function () {
+        worklist.fadeOut();
+    });
+
+    worklist_cont.click(function (event) {
+        event.stopPropagation();
+    });
+
     $('.pro-left-2').waypoint(function (dir) {
         $('.pro-left-2').css({
             opacity: 0,
@@ -303,20 +327,21 @@ $(document).ready(function(){
 
 
     let rede_text = $('.rede-text');
-
+    let rede_btn = $('.rede-btn');
+    
     new Swiper('.sw-rede', {
         effect: 'fade',
         navigation: {
-            nextEl: ".sw-rede-next",
-            prevEl: ".sw-rede-prev",
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
         speed: 1000,
         on: {
             slideChange: function () {
 
-                if (!rede_text) {
-                    rede_text = $('.rede-text');
-                }
+                // if (!rede_text) {
+                //     rede_text = $('.rede-text');
+                // }
 
                 // this.activeIndex : 활성화 되어야 할 슬라이드
                 rede_text.eq(this.activeIndex).css({
@@ -328,8 +353,19 @@ $(document).ready(function(){
                     'margin-left': '0%'
                 }, 800);
 
+                rede_btn.eq(this.activeIndex).css({
+                    opacity: 0,
+                });
+                rede_btn.eq(this.activeIndex).stop().animate({
+                    opacity: 1,
+                }, 800);
+
                 // this.previousIndex : 보였었던 슬라이드
                 rede_text.eq(this.previousIndex).stop().animate({
+                    opacity: 0
+                }, 300);
+
+                rede_btn.eq(this.previousIndex).stop().animate({
                     opacity: 0
                 }, 300);
 
@@ -362,76 +398,69 @@ $(document).ready(function(){
     let publ_box = $('.publ-box');
     let publ_btn = $('.publ-btn');
 
-        
     $('.publ-2 > .publ-btn').hide();
     $('.publ-3 > .publ-btn').hide();
     $('.publ-4 > .publ-btn').hide();
 
-    publ_box.eq(0).click(function(){
-        publ_box.eq(0).addClass('publ-wide');
-        publ_box.eq(1).addClass('publ-close');
-        publ_box.eq(2).addClass('publ-close');
-        publ_box.eq(3).addClass('publ-close');
+    publ_box.each(function (index, item){
+        publ_box.eq(0).click(function(){
+            
+            publ_box.eq(index).addClass('publ-close'); 
+            publ_box.eq(0).addClass('publ-wide');
+            
+            publ_box.eq(index).removeClass('publ-wide');
+            publ_box.eq(0).removeClass('publ-close');
+            
+            $('.publ-1 > .publ-btn').show();
+            $('.publ-2 > .publ-btn').fadeOut();
+            $('.publ-3 > .publ-btn').fadeOut();
+            $('.publ-4 > .publ-btn').fadeOut();
+        });
+        publ_box.eq(1).click(function(){
+            publ_box.eq(index).addClass('publ-close');
+            publ_box.eq(1).addClass('publ-wide');
+            
+            publ_box.eq(index).removeClass('publ-wide');
+            publ_box.eq(1).removeClass('publ-close');
+            
+            $('.publ-1 > .publ-btn').fadeOut();
+            $('.publ-2 > .publ-btn').show();
+            $('.publ-3 > .publ-btn').fadeOut();
+            $('.publ-4 > .publ-btn').fadeOut();
+        });
 
-        publ_box.eq(0).removeClass('publ-close');
-        publ_box.eq(1).removeClass('publ-wide');
-        publ_box.eq(2).removeClass('publ-wide');
-        publ_box.eq(3).removeClass('publ-wide');
+        publ_box.eq(2).click(function(){
+            publ_box.eq(index).addClass('publ-close');
+            publ_box.eq(2).addClass('publ-wide');
+            
+            publ_box.eq(index).removeClass('publ-wide');
+            publ_box.eq(2).removeClass('publ-close');
+            
+            $('.publ-1 > .publ-btn').fadeOut();
+            $('.publ-2 > .publ-btn').fadeOut();
+            $('.publ-3 > .publ-btn').show();
+            $('.publ-4 > .publ-btn').fadeOut();
+        });
 
-        $('.publ-1 > .publ-btn').show();
-        $('.publ-2 > .publ-btn').fadeOut();
-        $('.publ-3 > .publ-btn').fadeOut();
-        $('.publ-4 > .publ-btn').fadeOut();
-    });
-    publ_box.eq(1).click(function(){
-        publ_box.eq(0).addClass('publ-close');
-        publ_box.eq(1).addClass('publ-wide');
-        publ_box.eq(2).addClass('publ-close');
-        publ_box.eq(3).addClass('publ-close');
-        
-        publ_box.eq(0).removeClass('publ-wide');
-        publ_box.eq(1).removeClass('publ-close');
-        publ_box.eq(2).removeClass('publ-wide');
-        publ_box.eq(3).removeClass('publ-wide');
-        
-        $('.publ-1 > .publ-btn').fadeOut();
-        $('.publ-2 > .publ-btn').show();
-        $('.publ-3 > .publ-btn').fadeOut();
-        $('.publ-4 > .publ-btn').fadeOut();
-    });
+        publ_box.eq(3).click(function(){
+            publ_box.eq(0).addClass('publ-close');
+            publ_box.eq(1).addClass('publ-close');
+            publ_box.eq(2).addClass('publ-close');
+            //publ_box.eq(index).addClass('publ-close');
+            publ_box.eq(3).addClass('publ-wide');
+            
+            publ_box.eq(0).removeClass('publ-wide');
+            publ_box.eq(1).removeClass('publ-wide');
+            publ_box.eq(2).removeClass('publ-wide');
+            //publ_box.eq(index).removeClass('publ-wide');
+            publ_box.eq(3).removeClass('publ-close');
+            
+            $('.publ-1 > .publ-btn').fadeOut();
+            $('.publ-2 > .publ-btn').fadeOut();
+            $('.publ-3 > .publ-btn').fadeOut();
+            $('.publ-4 > .publ-btn').show();
 
-    publ_box.eq(2).click(function(){
-        publ_box.eq(0).addClass('publ-close');
-        publ_box.eq(1).addClass('publ-close');
-        publ_box.eq(2).addClass('publ-wide');
-        publ_box.eq(3).addClass('publ-close');
-        
-        publ_box.eq(0).removeClass('publ-wide');
-        publ_box.eq(1).removeClass('publ-wide');
-        publ_box.eq(2).removeClass('publ-close');
-        publ_box.eq(3).removeClass('publ-wide');
-        
-        $('.publ-1 > .publ-btn').fadeOut();
-        $('.publ-2 > .publ-btn').fadeOut();
-        $('.publ-3 > .publ-btn').show();
-        $('.publ-4 > .publ-btn').fadeOut();
-    });
-
-    publ_box.eq(3).click(function(){
-        publ_box.eq(0).addClass('publ-close');
-        publ_box.eq(1).addClass('publ-close');
-        publ_box.eq(2).addClass('publ-close');
-        publ_box.eq(3).addClass('publ-wide');
-        
-        publ_box.eq(0).removeClass('publ-wide');
-        publ_box.eq(1).removeClass('publ-wide');
-        publ_box.eq(2).removeClass('publ-wide');
-        publ_box.eq(3).removeClass('publ-close');
-        
-        $('.publ-1 > .publ-btn').fadeOut();
-        $('.publ-2 > .publ-btn').fadeOut();
-        $('.publ-3 > .publ-btn').fadeOut();
-        $('.publ-4 > .publ-btn').show();
+        });
     });
     
     // life
