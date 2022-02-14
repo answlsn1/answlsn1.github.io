@@ -92,9 +92,9 @@ body {
     left:0;
     top:0;
     width:100%;
-    background-color:rgba(228,228,228,0.8);
     height:10rem;
     z-index:999;
+    background:#fff;
 }
 
 .header .container {
@@ -156,11 +156,11 @@ body {
 /* 비주얼 */
 .visual {
     position:relative;
-    margin-top:10rem;
     width:100%;
     height:56rem;
     background:url('../images/visual.png')no-repeat center;
     background-size:cover;
+    margin-top:10rem;
 }
 
 .visual img {
@@ -210,7 +210,6 @@ body {
 .profile {
     position:relative;
     
-    background-color:#efefef;
 }
 
 .profile .container {
@@ -319,6 +318,14 @@ body {
     position:relative;
 }
 
+.pro-right-1 ul {
+    position:relative;
+    display:block;
+}
+.pro-right-1 ul li {
+    clear:both;
+}
+
 .pro-right-1 h2 {
     margin-bottom:2rem;
 }
@@ -326,6 +333,7 @@ body {
 .pro-right-1 p {
     font-size:1.9rem;
     text-align:left;
+    line-height:1.8;
 }
 
 .pro-right-1-txt1 {
@@ -475,7 +483,7 @@ body {
     left:61rem;
     top:17rem;
     display:block;
-    width:35rem;
+    width:40rem;
     height:40rem;
     border:3px solid #b47957;
 }
@@ -485,43 +493,63 @@ body {
     height:100%;
 }
 
+.swiper-button-next,
+.swiper-button-prev {
+    color:#999;
+}
+
+
 .rede-box {
     position:relative;
     display:inline-block;
-    width:35rem;
+    width:40rem;
     height:40rem;
+    overflow:hidden;
 }
 
 .rede-box img {
     position:relative;
-    width:35rem;
     height:40rem;
 }
 
 .rede-btn {
     position:absolute;
-    top:56rem;
-    left:11rem;
+    bottom:2rem;
+    left:0;
     display:inline-block;
     width:100%;
 }
 
 .rede-center-btn {
     text-align:center;
-    color:#fff;
+    font-weight:700;
     font-size:2.0rem;
 
-    background-color:#7f7f7f;
-    padding:0.3rem 2rem 0.8rem 2rem;
-    margin:0 1rem;
-    border:2px solid #7f7f7f;
+    padding:0.3rem 0;
+    width:50%;
+    display:block;
+    float:left;
+    transition: all ease 0.3s;
+}
+
+.btn1 > .rede-center-btn {
+    color:#fff;
+}
+
+.btn1 > .rede-center-btn:hover {
+    font-size:2.5rem;
+}
+
+.btn2 > .rede-center-btn {
+    color:#000;
+}
+
+.btn2 > .rede-center-btn:hover {
+    font-size:2.5rem;
 }
 
 .rede-center-btn:hover {
     
-    background: #fff;
-    transition: all ease 0.8s;
-    color:rgba(127,127,127,1);
 }
 
 .rede-text {
@@ -1024,4 +1052,74 @@ body {
 
     line-height:1.4;
     letter-spacing: -0.045rem;
+}
+
+/* modal work list*/
+.ebi {
+    color:#ccc;
+    border-bottom:1px solid #000;
+    padding-bottom:5px;
+}
+
+.ebi:hover {
+    color:#000;
+}
+
+.worklist {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+}
+
+.worklist-cont {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    display: block;
+    width: 45rem;
+    height: 25rem;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.worklist-cont > * {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+
+    font-size: 2rem;
+    white-space: nowrap;
+    line-height: 2;
+}
+
+.worklist-cont > h3 {
+    top:2rem;
+}
+
+
+.worklist-cont li {
+    font-weight:300;
+}
+
+.worklist-cont li:first-child {
+    text-align:center;
+    font-weight:500;
+}
+
+.worklist-cont li a:hover {
+    border-bottom:1px solid #000;
+}
+
+.worklist-close {
+    position: absolute;
+    right: 1rem;
+    top: -4.5rem;
 }
