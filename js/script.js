@@ -299,7 +299,7 @@ $(document).ready(function(){
         if(sc_y >= 100) {
             photoshop.animate(0.9);
             illustrator.animate(0.7);
-            adobe_xd.animate(0.8);
+            adobe_xd.animate(0.7);
             html.animate(1);
             css.animate(0.9);
             jquery.animate(0.8);
