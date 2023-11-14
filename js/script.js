@@ -401,6 +401,7 @@ $(document).ready(function(){
     $('.publ-2 > .publ-btn').hide();
     $('.publ-3 > .publ-btn').hide();
     $('.publ-4 > .publ-btn').hide();
+    $('.publ-5 > .publ-btn').hide();
 
     publ_box.each(function (index, item){
         publ_box.eq(0).click(function(){
@@ -415,6 +416,7 @@ $(document).ready(function(){
             $('.publ-2 > .publ-btn').fadeOut();
             $('.publ-3 > .publ-btn').fadeOut();
             $('.publ-4 > .publ-btn').fadeOut();
+            $('.publ-5 > .publ-btn').fadeOut();
         });
         publ_box.eq(1).click(function(){
             publ_box.eq(index).addClass('publ-close');
@@ -427,6 +429,7 @@ $(document).ready(function(){
             $('.publ-2 > .publ-btn').show();
             $('.publ-3 > .publ-btn').fadeOut();
             $('.publ-4 > .publ-btn').fadeOut();
+            $('.publ-5 > .publ-btn').fadeOut();
         });
 
         publ_box.eq(2).click(function(){
@@ -440,29 +443,46 @@ $(document).ready(function(){
             $('.publ-2 > .publ-btn').fadeOut();
             $('.publ-3 > .publ-btn').show();
             $('.publ-4 > .publ-btn').fadeOut();
+            $('.publ-5 > .publ-btn').fadeOut();
         });
-
+        
         publ_box.eq(3).click(function(){
-            publ_box.eq(0).addClass('publ-close');
-            publ_box.eq(1).addClass('publ-close');
-            publ_box.eq(2).addClass('publ-close');
-            //publ_box.eq(index).addClass('publ-close');
+            publ_box.eq(index).addClass('publ-close');
             publ_box.eq(3).addClass('publ-wide');
             
-            publ_box.eq(0).removeClass('publ-wide');
-            publ_box.eq(1).removeClass('publ-wide');
-            publ_box.eq(2).removeClass('publ-wide');
-            //publ_box.eq(index).removeClass('publ-wide');
+            publ_box.eq(index).removeClass('publ-wide');
             publ_box.eq(3).removeClass('publ-close');
             
             $('.publ-1 > .publ-btn').fadeOut();
             $('.publ-2 > .publ-btn').fadeOut();
             $('.publ-3 > .publ-btn').fadeOut();
             $('.publ-4 > .publ-btn').show();
+            $('.publ-5 > .publ-btn').fadeOut();
+        });
 
+        publ_box.eq(4).click(function(){
+            publ_box.eq(0).addClass('publ-close');
+            publ_box.eq(1).addClass('publ-close');
+            publ_box.eq(2).addClass('publ-close');
+            //publ_box.eq(index).addClass('publ-close');
+            publ_box.eq(3).addClass('publ-close');
+            publ_box.eq(4).addClass('publ-wide');
+            
+            publ_box.eq(0).removeClass('publ-wide');
+            publ_box.eq(1).removeClass('publ-wide');
+            publ_box.eq(2).removeClass('publ-wide');
+            //publ_box.eq(index).removeClass('publ-wide');
+            publ_box.eq(3).removeClass('publ-wide');
+            publ_box.eq(4).removeClass('publ-close');
+            
+            $('.publ-1 > .publ-btn').fadeOut();
+            $('.publ-2 > .publ-btn').fadeOut();
+            $('.publ-3 > .publ-btn').fadeOut();
+            $('.publ-4 > .publ-btn').fadeOut();
+            $('.publ-5 > .publ-btn').show();
         });
     });
-    
+
     // life
     $('.life-title').waypoint(function (dir) {
         $('.life-title').css({
