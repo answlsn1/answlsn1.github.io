@@ -1,0 +1,45 @@
+##genesis.com## / 제네시스 클론코딩
+
+#layout
+header
+-main_menu(click) - sub_menu - 모델 - sub_left_menu(click)[sedan/suv] - 자세히보기/견적내기/시승신청
+                                ㄴ   구매/체험/멤버스/제네시스main_menu - sub_menu - sub_menu2
+-all_menu(click) - search/sub_menu
+
+section1(visual_slide)
+- slide
+   ㄴ image/title1,2,3
+   ㄴ 더알아보기
+   ㄴ 견적내기
+   ㄴ 슬라이드 네비게이션/시작,정지버튼
+
+section2(our models)
+- title1,2
+- select
+- models_slide
+      ㄴ자세히보기(click)
+- icon(견적내기/구매상담신청/시승신청/카탈로그)
+
+section3(the awards)
+- slide
+    ㄴ image/title/text/네비
+
+section4(contents)
+- 스페이스 - 자세히보기
+- 로드트립 - 자세히보기
+
+section5(Genesis events)
+- 이벤트보기 버튼
+
+section6(연관 컨텐츠)
+- 이벤트
+- 디지털 서비스
+- 멤버스
+
+footer
+- sns
+- 공지사항
+- 하단메뉴(all_menu와 같음)
+- 하단메뉴2
+- 하단메뉴3, 언어선택
+- copyright

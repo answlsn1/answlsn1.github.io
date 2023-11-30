@@ -1,0 +1,15 @@
+#프로젝트 시작
+07.28(목)~
+
+07.28 - 영역구분, 기본세팅
+07.29 - header, main_menu, sub_wrap-menu_model 이미지 추가 / all_menu animation 수정필요(방법찾아야됨)
+08.01 - main_slide_box, more_btn
+08.02
+
+
+
+h1 - 미정(logo?)
+h2 - visual_slide_title
+h3 - 메인메뉴 내용제목
+
+main_menu/click - sub_wrap/toggle, (메인페이지 스크롤제한? 메인페이지 hide? 화면 높이조정?)
