@@ -59,16 +59,16 @@ $(document).ready(function(){
 
 
     // visual
-    let visual_img = $('.visual img');
+    // let visual_backtxt = $('.visual p.visual_backtxt');
 
-    visual_img.css({
-        opacity: 0,
-        'margin-top': '-1%'
-    });
-    visual_img.stop().animate({
-        opacity: 1,
-        'margin-top': '0%'
-    }, 1000);
+    // visual_backtxt.css({
+    //     opacity: 0,
+    //     'margin-top': '-1%'
+    // });
+    // visual_backtxt.stop().animate({
+    //     opacity: 1,
+    //     'margin-top': '0%'
+    // }, 1000);
 
     // Profile
 
