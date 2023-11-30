@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import url('notosanskr/NotoSansKR.css');
+@import url('maple/Maplestory.css');
 
 * {
     margin: 0;
@@ -25,6 +26,7 @@ a {
 
 html {
     font-size:10px;
+    /* overflow:hidden; */
 }
 
 body {
@@ -94,7 +96,7 @@ body {
     width:100%;
     height:10rem;
     z-index:999;
-    background:#fff;
+    border-top:5px solid #bc937c;
 }
 
 .header .container {
@@ -114,18 +116,18 @@ body {
 
 .gnb {
     position:absolute;
-    left:31.5rem;
-    top:5.8rem;
+    left:30rem;
+    top:5rem;
 }
 
 .header-active {
-    background-color: rgba(255, 255, 255, 1.0);
+    background-color: rgba(0, 0, 0, 0.4);
     border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
 }
 
 
 .header-active .gnb a {
-    color: #20283b !important;
+    color: #fff !important;
 }
 
 .depth1 {}
@@ -137,7 +139,8 @@ body {
 
 .depth1 li a {
     position:relative;
-    font-size:2.1rem;
+    font-size:2.3rem;
+    color:#fff;
 }
 
 .depth1 li a:hover::after {
@@ -152,21 +155,50 @@ body {
     z-index:-1;
 }
 
+section {
+    width:100%;
+    height:100%;
+}
 
 /* 비주얼 */
 .visual {
     position:relative;
     width:100%;
-    height:56rem;
-    background:url('../images/visual.png')no-repeat center;
+    height:93rem;
+    background:#be947e;
     background-size:cover;
-    margin-top:10rem;
 }
 
-.visual img {
+.visual .visual_img {
+    background:url('../images/visual-txt.png') no-repeat center;
+    width:100%;
+    height:12rem;
     position:absolute;
-    left:0;
-    top:7rem;
+    left:50%;
+    top:50%;
+    transform: translate(-50%);
+}
+
+.visual p.visual_txt {
+    position:absolute;
+    left:50%;
+    top:30rem;
+    transform:translateX(-50%);
+    font-size:70px;
+    font-family:'Maplestory';
+    color:#fff;
+}
+
+.visual p.visual_backtxt {
+    position:absolute;
+    left:50%;
+    top:20rem;
+    transform:translateX(-50%);
+    font-size:400px;
+    font-family:'Maplestory';
+    color:#fff;
+    opacity:10%;
+
 }
 
 .visual button {
@@ -233,9 +265,14 @@ body {
     border-top:1px solid #000;
 }
 
-.career_list>a,
 .career_list {
-    color:#999;
+    color:#b47957;
+}
+
+.career_list>a{
+    color:#b47957;
+    border-bottom:1px solid #b47957;
+    font-weight:700;
 }
 
 .career_list>a:hover {
@@ -260,17 +297,29 @@ body {
 .pro-left-1 h2 {
     font-size:3.3rem;
     color:#2b2942;
+    margin-left:23rem;
 }
 
 .pro-left-1 p {
     font-size:1.7rem;
     font-weight:700;
     color:#b9b9b9;
+    margin-left:23rem;
+    margin-top:1rem;
+}
+
+.pro-pick {
+    background:url('../images/pro.jpg')no-repeat;
+    background-size: 80%;
+    position:absolute;
+    left:0;
+    width:70%;
+    height:25rem;
 }
 
 .pro-left-2 {
     position:relative;
-    margin-top:10rem;
+    margin-top:15rem;
     opacity:0;
     transition: all ease 0.2s;
 }
